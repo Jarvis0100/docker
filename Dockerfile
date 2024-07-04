@@ -1,12 +1,12 @@
 FROM python:3
  
-WORKDIR /app
+WORKDIR . .
  
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
  
-COPY /app /app
+COPY . .
  
 RUN python manage.py migrate
  
